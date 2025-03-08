@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Assessment - MindTrack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">MindTrack</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="assessment.html" class="active">Assessment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="assessment-page">
+        <section class="assessment-content">
+            <h1>Stress Assessment</h1>
+            <p class="assessment-intro">Answer these 20 questions honestly to receive your personalized stress management plan.</p>
+            
+            <form id="stressAssessment" class="assessment-form">
+                <!-- Question Group 1: Anxiety -->
+                <div class="question-group">
+                    <h3>Anxiety</h3>
+                    <div class="question">
+                        <p>1. How often do you feel anxious or worried in your daily life?</p>
+                        <label><input type="radio" name="q1" value="1" required> Never</label>
+                        <label><input type="radio" name="q1" value="3"> Occasionally</label>
+                        <label><input type="radio" name="q1" value="5"> Extremely often</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 2: Self-esteem -->
+                <div class="question-group">
+                    <h3>Self-esteem</h3>
+                    <div class="question">
+                        <p>2. How confident do you feel about yourself and your abilities?</p>
+                        <label><input type="radio" name="q2" value="1" required> Very low</label>
+                        <label><input type="radio" name="q2" value="3"> Moderate</label>
+                        <label><input type="radio" name="q2" value="5"> Very high</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 3: Mental Health History -->
+                <div class="question-group">
+                    <h3>Mental Health History</h3>
+                    <div class="question">
+                        <p>3. Have you ever been diagnosed with or sought professional help for mental health issues?</p>
+                        <label><input type="radio" name="q3" value="1" required> No</label>
+                        <label><input type="radio" name="q3" value="5"> Yes</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 4: Depression -->
+                <div class="question-group">
+                    <h3>Depression</h3>
+                    <div class="question">
+                        <p>4. How often do you feel sad, hopeless, or lose interest in activities?</p>
+                        <label><input type="radio" name="q4" value="1" required> Never</label>
+                        <label><input type="radio" name="q4" value="3"> Occasionally</label>
+                        <label><input type="radio" name="q4" value="5"> Very frequently</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 5: Headaches -->
+                <div class="question-group">
+                    <h3>Headaches</h3>
+                    <div class="question">
+                        <p>5. How often do you experience headaches?</p>
+                        <label><input type="radio" name="q5" value="1" required> Never</label>
+                        <label><input type="radio" name="q5" value="3"> Occasionally</label>
+                        <label><input type="radio" name="q5" value="5"> Very frequently</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 6: Blood Pressure -->
+                <div class="question-group">
+                    <h3>Blood Pressure</h3>
+                    <div class="question">
+                        <p>6. Have you experienced any issues related to blood pressure recently?</p>
+                        <label><input type="radio" name="q6" value="1" required> Low</label>
+                        <label><input type="radio" name="q6" value="3"> Normal</label>
+                        <label><input type="radio" name="q6" value="5"> High</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 7: Sleep Quality -->
+                <div class="question-group">
+                    <h3>Sleep Quality</h3>
+                    <div class="question">
+                        <p>7. How would you rate the quality of your sleep?</p>
+                        <label><input type="radio" name="q7" value="1" required> Very poor</label>
+                        <label><input type="radio" name="q7" value="3"> Fair</label>
+                        <label><input type="radio" name="q7" value="5"> Excellent</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 8: Breathing Problems -->
+                <div class="question-group">
+                    <h3>Breathing Problems</h3>
+                    <div class="question">
+                        <p>8. How often do you experience breathing difficulties?</p>
+                        <label><input type="radio" name="q8" value="1" required> Never</label>
+                        <label><input type="radio" name="q8" value="3"> Occasionally</label>
+                        <label><input type="radio" name="q8" value="5"> Very frequently</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 9: Noise Level -->
+                <div class="question-group">
+                    <h3>Noise Level</h3>
+                    <div class="question">
+                        <p>9. How would you rate the noise levels in your environment?</p>
+                        <label><input type="radio" name="q9" value="1" required> Very quiet</label>
+                        <label><input type="radio" name="q9" value="3"> Moderate</label>
+                        <label><input type="radio" name="q9" value="5"> Extremely noisy</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 10: Living Conditions -->
+                <div class="question-group">
+                    <h3>Living Conditions</h3>
+                    <div class="question">
+                        <p>10. How do you think the living conditions around you are?</p>
+                        <label><input type="radio" name="q10" value="1" required> Very poor</label>
+                        <label><input type="radio" name="q10" value="3"> Fair</label>
+                        <label><input type="radio" name="q10" value="5"> Excellent</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 11: Safety -->
+                <div class="question-group">
+                    <h3>Safety</h3>
+                    <div class="question">
+                        <p>11. How safe do you feel in your environment?</p>
+                        <label><input type="radio" name="q11" value="1" required> Not safe at all</label>
+                        <label><input type="radio" name="q11" value="3"> Safe</label>
+                        <label><input type="radio" name="q11" value="5"> Very safe</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 12: Basic Needs -->
+                <div class="question-group">
+                    <h3>Basic Needs</h3>
+                    <div class="question">
+                        <p>12. How well are your basic needs (food, water, shelter) met?</p>
+                        <label><input type="radio" name="q12" value="1" required> Not met at all</label>
+                        <label><input type="radio" name="q12" value="3"> Adequately met</label>
+                        <label><input type="radio" name="q12" value="5"> Fully met</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 13: Academic Performance -->
+                <div class="question-group">
+                    <h3>Academic Performance</h3>
+                    <div class="question">
+                        <p>13. How satisfied are you with your academic performance?</p>
+                        <label><input type="radio" name="q13" value="1" required> Very dissatisfied</label>
+                        <label><input type="radio" name="q13" value="3"> Satisfied</label>
+                        <label><input type="radio" name="q13" value="5"> Very satisfied</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 14: Study Load -->
+                <div class="question-group">
+                    <h3>Study Load</h3>
+                    <div class="question">
+                        <p>14. How much study load do you think you have?</p>
+                        <label><input type="radio" name="q14" value="1" required> Very low</label>
+                        <label><input type="radio" name="q14" value="3"> Moderate</label>
+                        <label><input type="radio" name="q14" value="5"> Overwhelming</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 15: Teacher-Student Relationship -->
+                <div class="question-group">
+                    <h3>Teacher-Student Relationship</h3>
+                    <div class="question">
+                        <p>15. How would you describe your relationship with your teachers?</p>
+                        <label><input type="radio" name="q15" value="1" required> Not good</label>
+                        <label><input type="radio" name="q15" value="3"> Good</label>
+                        <label><input type="radio" name="q15" value="5"> Very good</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 16: Career Concern -->
+                <div class="question-group">
+                    <h3>Career Concern</h3>
+                    <div class="question">
+                        <p>16. How concerned are you about your future career?</p>
+                        <label><input type="radio" name="q16" value="1" required> Not concerned</label>
+                        <label><input type="radio" name="q16" value="3"> Moderately concerned</label>
+                        <label><input type="radio" name="q16" value="5"> Extremely concerned</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 17: Social Support -->
+                <div class="question-group">
+                    <h3>Social Support</h3>
+                    <div class="question">
+                        <p>17. How strong is your social support system (family, friends, etc.)?</p>
+                        <label><input type="radio" name="q17" value="1" required> Weak</label>
+                        <label><input type="radio" name="q17" value="3"> Moderate</label>
+                        <label><input type="radio" name="q17" value="5"> Strong</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 18: Peer Pressure -->
+                <div class="question-group">
+                    <h3>Peer Pressure</h3>
+                    <div class="question">
+                        <p>18. How much peer pressure do you experience?</p>
+                        <label><input type="radio" name="q18" value="1" required> None</label>
+                        <label><input type="radio" name="q18" value="3"> Moderate</label>
+                        <label><input type="radio" name="q18" value="5"> Extremely high</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 19: Extracurricular Activities -->
+                <div class="question-group">
+                    <h3>Extracurricular Activities</h3>
+                    <div class="question">
+                        <p>19. How often do you engage in extracurricular activities?</p>
+                        <label><input type="radio" name="q19" value="1" required> Never</label>
+                        <label><input type="radio" name="q19" value="3"> Occasionally</label>
+                        <label><input type="radio" name="q19" value="5"> Very frequently</label>
+                    </div>
+                </div>
+
+                <!-- Question Group 20: Bullying -->
+                <div class="question-group">
+                    <h3>Bullying</h3>
+                    <div class="question">
+                        <p>20. Have you ever experienced bullying?</p>
+                        <label><input type="radio" name="q20" value="1" required> No bullying</label>
+                        <label><input type="radio" name="q20" value="3"> Occasional bullying</label>
+                        <label><input type="radio" name="q20" value="5"> Severe bullying</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Get Your Results</button>
+            </form>
+
+            <div id="results" class="results-section" style="display: none;">
+                <h2>Your Stress Assessment Results</h2>
+                <div class="stress-meter">
+                    <div class="stress-level">
+                        <span>Your Stress Level: </span>
+                        <span id="stressScore" class="score"></span>
+                    </div>
+                    <div class="stress-category">
+                        <span>Category: </span>
+                        <span id="stressCategory"></span>
+                    </div>
+                </div>
+                <div class="recommendations">
+                    <h3>Personalized Recommendations</h3>
+                    <div id="recommendationsList"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MindTrack. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('stressAssessment').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Calculate total score
+            let totalScore = 0;
+            let answeredQuestions = 0;
+            
+            for(let i = 1; i <= 20; i++) {
+                const answer = parseInt(this[`q${i}`].value);
+                if (!isNaN(answer)) {
+                    totalScore += answer;
+                    answeredQuestions++;
+                }
+            }
+            
+            // Normalize the score to a range of 0-2
+            const maxPossibleScore = answeredQuestions * 5; // Each question has a max score of 5
+            const normalizedScore = (totalScore / maxPossibleScore) * 2;
+            const averageScore = normalizedScore.toFixed(2); // Round to 2 decimal places
+            
+            // Determine stress category based on 0-2 scale
+            let category;
+            let recommendations = [];
+            
+            if (averageScore <= 0.5) {
+                category = "Low Stress";
+                recommendations = [
+                    "Maintain your current stress management techniques",
+                    "Practice regular mindfulness to stay aware of your stress levels",
+                    "Continue with regular exercise and healthy sleep habits",
+                    "Consider sharing your successful strategies with others"
+                ];
+            } else if (averageScore <= 1.0) {
+                category = "Moderate Stress";
+                recommendations = [
+                    "Incorporate daily relaxation techniques like deep breathing or meditation",
+                    "Establish a regular exercise routine",
+                    "Improve your sleep schedule",
+                    "Consider time management techniques to better balance your responsibilities",
+                    "Take regular breaks during work hours"
+                ];
+            } else {
+                category = "High Stress";
+                recommendations = [
+                    "Consider speaking with a mental health professional",
+                    "Implement immediate stress reduction techniques like meditation and deep breathing",
+                    "Review and adjust your work-life balance",
+                    "Prioritize sleep and physical exercise",
+                    "Create boundaries in your professional and personal life",
+                    "Consider delegating tasks when possible"
+                ];
+            }
+            
+            // Display results
+            document.getElementById('stressScore').textContent = averageScore;
+            document.getElementById('stressCategory').textContent = category;
+            
+            // Display recommendations
+            const recommendationsList = document.getElementById('recommendationsList');
+            recommendationsList.innerHTML = recommendations.map(rec => `<p>• ${rec}</p>`).join('');
+            
+            // Show results section
+            document.getElementById('results').style.display = 'block';
+            
+            // Scroll to results
+            window.scrollTo({ top: document.getElementById('results').offsetTop, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

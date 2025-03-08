@@ -1,0 +1,423 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Dark gray for text */
+    background-color: #F8F9FA; /* Light gray background */
+}
+
+/* Navigation */
+nav {
+    background-color: #2C2C2C; /* Dark black for navigation */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #FFFFFF; /* White for the logo */
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF; /* White for links */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #D2B48C; /* Warm beige for active/hover links */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #D2B48C; /* Warm beige for underline */
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 44, 44, 0.8), rgba(44, 44, 44, 0.8)),
+                url('https://images.unsplash.com/photo-1527525443983-6e60c75fff46?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF; /* White for text */
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* Buttons */
+.cta-button,
+.submit-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #8B4513; /* Warm brown for buttons */
+    color: #FFFFFF; /* White for button text */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover,
+.submit-button:hover {
+    background-color: #A0522D; /* Darker warm brown for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+    padding: 6rem 2rem;
+    background-color: #FFFFFF; /* White background */
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    color: #2C2C2C; /* Dark black for headings */
+    font-weight: 700;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 2.5rem;
+    background-color: #FFFFFF; /* White for cards */
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    color: #2C2C2C; /* Dark black for card headings */
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #666; /* Gray for card text */
+    font-size: 1rem;
+}
+
+/* About Page */
+.about-page {
+    padding: 8rem 2rem 6rem;
+    background-color: #F8F9FA; /* Light gray background */
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: #2C2C2C; /* Dark black for headings */
+    margin: 2rem 0 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-text p {
+    color: #666; /* Gray for text */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.feature-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Page */
+.contact-page {
+    padding: 8rem 2rem 6rem;
+    background-color: #FFFFFF; /* White background */
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #2C2C2C; /* Dark black for labels */
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #E1E8ED; /* Light gray for borders */
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #FFFFFF; /* White for input fields */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8B4513; /* Warm brown for focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1); /* Warm brown shadow */
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Assessment Page */
+.assessment-page {
+    padding: 8rem 2rem 6rem;
+    background-color: #F8F9FA; /* Light gray background */
+}
+
+.assessment-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.assessment-intro {
+    text-align: center;
+    margin: 2rem 0 3rem;
+    color: #666; /* Gray for text */
+    font-size: 1.2rem;
+}
+
+.question-group {
+    background-color: #FFFFFF; /* White for question groups */
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question-group h3 {
+    color: #2C2C2C; /* Dark black for headings */
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.question {
+    margin-bottom: 2rem;
+}
+
+.question p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #444; /* Dark gray for text */
+}
+
+.question select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #E1E8ED; /* Light gray for borders */
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.question select:focus {
+    border-color: #8B4513; /* Warm brown for focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1); /* Warm brown shadow */
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 4rem;
+    padding: 3rem;
+    background-color: #FFFFFF; /* White for results section */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.results-section h2 {
+    color: #2C2C2C; /* Dark black for headings */
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.stress-meter {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #F8F9FA; /* Light gray for stress meter */
+    border-radius: 10px;
+}
+
+.stress-level {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.score {
+    font-weight: bold;
+    color: #8B4513; /* Warm brown for score */
+    font-size: 2rem;
+}
+
+.stress-category {
+    font-size: 1.3rem;
+}
+
+.recommendations {
+    padding: 2rem;
+}
+
+.recommendations h3 {
+    color: #2C2C2C; /* Dark black for headings */
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.recommendations p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #444; /* Dark gray for text */
+}
+
+/* Footer */
+footer {
+    background-color: #2C2C2C; /* Dark black for footer */
+    color: #FFFFFF; /* White for text */
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .question-group {
+        padding: 1.5rem;
+    }
+}
